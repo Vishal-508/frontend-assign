@@ -148,19 +148,19 @@ Add your screenshots in a `screenshots` folder and update the image paths below.
 
 ### Dashboard
 
-![Dashboard Screenshot](./screenshots/dashboard.png)
+![Dashboard Screenshot](./frontend-assign/screenshots/dashboard.png)
 
 ### Create New User Modal
 
-![Create User Modal Screenshot](./screenshots/create-user-modal.png)
+![Create User Modal Screenshot](./frontend-assign/screenshots/create-user-modal.png)
 
 ### User Details Page
 
-![User Details Screenshot](./screenshots/user-details.png)
+![User Details Screenshot](./frontend-assign/screenshots/user-details.png)
 
 ### Mobile View
 
-![Mobile View Screenshot](./screenshots/mobile-view.png)
+![Mobile View Screenshot](./frontend-assign/screenshots/mobile-view.png)
 
 ## Main Pages
 
