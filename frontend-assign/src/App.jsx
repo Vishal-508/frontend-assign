@@ -10,9 +10,9 @@ import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <div className="app-shell">
-      <header className="topbar">
-        <Link to="/" className="brand" aria-label="Go to dashboard">
+    <div >
+      <header >
+        <Link to="/"  aria-label="Go to dashboard">
           User Dashboard
         </Link>
       </header>
