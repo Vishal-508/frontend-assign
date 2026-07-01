@@ -1,18 +1,223 @@
-# React + Vite
+# User Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React.js User Dashboard built for the React Frontend Intern Assignment. The app fetches users from an API, displays them in cards, supports search, pagination, client-side user creation, and a user details page with address and geo-location information.
 
-Currently, two official plugins are available:
+## Live Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Live Demo: Add your Netlify link here
+- GitHub Repository: [frontend-assign](https://vishal-dashboard-app.netlify.app/)
 
-## React Compiler
+## Assignment Objective
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Build a small User Dashboard app using React.js.
 
-Note: This will impact Vite dev & build performances.
+## Features
 
-## Expanding the ESLint configuration
+- Fetch users from `https://jsonplaceholder.typicode.com/users`
+- Display user name, email, phone, and company name in cards
+- Search/filter users by name
+- Create new user using a client-side modal form
+- Store users globally using React Context API
+- Persist newly created users in `localStorage`
+- User details page using React Router DOM
+- Show full user details including address and geo-location
+- Pagination on dashboard user list
+- Loading, error, empty, and 404 states
+- Fully responsive layout for mobile and desktop
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React.js
+- Vite
+- React Router DOM
+- Axios
+- React Context API
+- React Hooks
+- CSS Grid and Flexbox
+- Netlify for deployment
+
+## Requirements Covered
+
+| Requirement | Status |
+| --- | --- |
+| Fetch and display users from API | Done |
+| Show name, email, phone, company name | Done |
+| Search/filter by name | Done |
+| Create New User form | Done |
+| Global user state with Context API | Done |
+| User Details page with React Router | Done |
+| Show address and geo-location | Done |
+| Mobile responsive design | Done |
+| README with setup instructions | Done |
+| Screenshots section | Added |
+
+## Project Structure
+
+```txt
+src/
+  api/
+    usersApi.js
+  components/
+    ErrorMessage.jsx
+    Loading.jsx
+    Modal.jsx
+    Pagination.jsx
+    SearchBar.jsx
+    UserCard.jsx
+    UserForm.jsx
+  context/
+    UserContext.jsx
+  hooks/
+    useUsers.js
+  pages/
+    Dashboard.jsx
+    NotFound.jsx
+    UserDetails.jsx
+  styles/
+    global.css
+  App.jsx
+  main.jsx
+```
+
+## Installation and Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Vishal-508/frontend-assign.git
+```
+
+Go to the project folder:
+
+```bash
+cd frontend-assign/frontend-assign
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal, usually:
+
+```txt
+http://localhost:5173
+```
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Preview production build locally:
+
+```bash
+npm run preview
+```
+
+## Netlify Deployment
+
+Since the React project is inside the `frontend-assign` folder, use these Netlify build settings:
+
+```txt
+Base directory: frontend-assign
+Build command: npm run build
+Publish directory: dist
+```
+
+The project includes Netlify routing support for React Router:
+
+```txt
+public/_redirects
+netlify.toml
+```
+
+This prevents 404 errors when refreshing routes like `/users/1`.
+
+## Screenshots
+
+Add your screenshots in a `screenshots` folder and update the image paths below.
+
+### Dashboard
+
+![Dashboard Screenshot](./screenshots/dashboard.png)
+
+### Create New User Modal
+
+![Create User Modal Screenshot](./screenshots/create-user-modal.png)
+
+### User Details Page
+
+![User Details Screenshot](./screenshots/user-details.png)
+
+### Mobile View
+
+![Mobile View Screenshot](./screenshots/mobile-view.png)
+
+## Main Pages
+
+### Dashboard Page
+
+The dashboard page displays all users in a responsive card layout. It includes search, pagination, and a button to open the Create New User modal.
+
+### User Details Page
+
+Clicking on a user opens a details page. It displays contact details, company details, address, and geo-location.
+
+### Not Found Page
+
+Invalid routes show a simple 404 page with a link back to the dashboard.
+
+## Additional Improvements Added
+
+- Modal-based create user form
+- Form validation
+- Pagination
+- `localStorage` support for created users
+- Reusable components
+- CSS variables for easy theme and layout changes
+- Netlify deployment configuration
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+
+Runs the app in development mode.
+
+```bash
+npm run build
+```
+
+Builds the app for production.
+
+```bash
+npm run preview
+```
+
+Previews the production build locally.
+
+```bash
+npm run lint
+```
+
+Runs ESLint checks.
+
+## API Used
+
+```txt
+https://jsonplaceholder.typicode.com/users
+```
+
+## Author
+
+Vishal
