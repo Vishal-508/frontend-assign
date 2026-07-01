@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchBar = ({value, onChange}) => {
   return (
-    <label>
+    <label className="search-box" >
       <span>Search by name</span>
       <input
         type="search"

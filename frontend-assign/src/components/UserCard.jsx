@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const UserCard = ({ user }) => {
   return (
-    <article >
+    <article className="user-card">
       <div>
-        <p >{user.company.name}</p>
+        <p className="eyebrow" >{user.company.name}</p>
         <h3>{user.name}</h3>
       </div>
 
-      <div >
+      <div className="user-meta" >
         <p>
           <span>Email</span>
           {user.email}
@@ -20,7 +20,7 @@ const UserCard = ({ user }) => {
         </p>
       </div>
 
-      <Link  to={`/users/${user.id}`}>
+      <Link className="button button-secondary" to={`/users/${user.id}`}>
         View Details
       </Link>
     </article>

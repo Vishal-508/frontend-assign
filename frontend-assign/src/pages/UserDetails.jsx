@@ -2,6 +2,7 @@ import React from 'react'
 import Loading from '../components/Loading';
 import { Link, useParams } from 'react-router-dom';
 import { useUsers } from '../hooks/useUsers';
+import ErrorMessage from '../components/ErrorMessage';
 
 const UserDetails = () => {
 
@@ -11,7 +12,7 @@ const UserDetails = () => {
 
   if (loading) {
     return (
-      <div >
+      <div className="page">
         <Loading />
       </div>
     );
@@ -19,7 +20,7 @@ const UserDetails = () => {
 
   if (error) {
     return (
-      <div >
+      <div className="page">
         <ErrorMessage message={error} />
       </div>
     );
@@ -27,11 +28,11 @@ const UserDetails = () => {
 
   if (!user) {
     return (
-      <div >
-        <section >
+      <div className="page">
+        <section className="panel centered">
           <h1>User not found</h1>
           <p>This profile does not exist or has not loaded yet.</p>
-          <Link  to="/">
+          <Link className="button" to="/">
             Back to Dashboard
           </Link>
         </section>
@@ -40,23 +41,23 @@ const UserDetails = () => {
   }
 
   return (
-    <div >
-      <section >
-        <Link  to="/">
+    <div className="page">
+      <section className="details-hero">
+        <Link className="back-link" to="/">
           Back to Dashboard
         </Link>
-        <p >{user.company.name}</p>
+        <p className="eyebrow">{user.company.name}</p>
         <h1>{user.name}</h1>
         <p>{user.company.catchPhrase}</p>
       </section>
 
-      <section >
-        <article >
-          <div >
-            <p >Profile</p>
+      <section className="details-grid">
+        <article className="panel">
+          <div className="section-heading">
+            <p className="eyebrow">Profile</p>
             <h2>Contact Details</h2>
           </div>
-          <dl >
+          <dl className="details-list">
             <div>
               <dt>Username</dt>
               <dd>{user.username}</dd>
@@ -76,12 +77,12 @@ const UserDetails = () => {
           </dl>
         </article>
 
-        <article >
-          <div >
-            <p >Location</p>
+        <article className="panel">
+          <div className="section-heading">
+            <p className="eyebrow">Location</p>
             <h2>Address</h2>
           </div>
-          <dl >
+          <dl className="details-list">
             <div>
               <dt>Street</dt>
               <dd>{user.address.street}</dd>
@@ -101,12 +102,12 @@ const UserDetails = () => {
           </dl>
         </article>
 
-        <article >
-          <div >
-            <p >Geo</p>
+        <article className="panel">
+          <div className="section-heading">
+            <p className="eyebrow">Geo</p>
             <h2>Coordinates</h2>
           </div>
-          <dl >
+          <dl className="details-list">
             <div>
               <dt>Latitude</dt>
               <dd>{user.address.geo.lat}</dd>
@@ -118,12 +119,12 @@ const UserDetails = () => {
           </dl>
         </article>
 
-        <article >
-          <div >
-            <p >Company</p>
+        <article className="panel">
+          <div className="section-heading">
+            <p className="eyebrow">Company</p>
             <h2>{user.company.name}</h2>
           </div>
-          <dl >
+          <dl className="details-list">
             <div>
               <dt>Catchphrase</dt>
               <dd>{user.company.catchPhrase}</dd>
