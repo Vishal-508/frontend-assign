@@ -4,8 +4,8 @@ A responsive React.js User Dashboard built for the React Frontend Intern Assignm
 
 ## Live Links
 
-- Live Demo: Add your Netlify link here
-- GitHub Repository: [frontend-assign](https://vishal-dashboard-app.netlify.app/)
+- Live Demo: Add your Netlify [link here](https://vishal-dashboard-app.netlify.app/)
+- GitHub Repository: [frontend-assign](https://github.com/Vishal-508/frontend-assign)
 
 ## Assignment Objective
 
